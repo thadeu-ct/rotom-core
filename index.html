@@ -1,1 +1,44 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotom Core</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/479.png">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="api.js" defer></script>
+  <script src="ui.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+  <body>
+    <main id="app-content">
+      <h1>Bem-vindo ao Rotom Core!</h1>
+    </main>
+    <nav class="bottom-nav">
+      <ul class="nav-list">
+        <div class="nav-indicator"></div>
+        <li class="nav-item active">
+          <a href="#pokedex" class="nav-link" data-page="pokedex">
+            <i class='bx bxs-book-reader'></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#game" class="nav-link" data-page="game">
+            <i class='bx bxs-help-circle'></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#team" class="nav-link" data-page="team">
+            <i class='bx bxs-group'></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#settings" class="nav-link" data-page="settings">
+            <i class='bx bxs-cog'></i>
+          </a>
+        </li>
+      </ul>
+    </nav> 
+  </body>
+</html>
