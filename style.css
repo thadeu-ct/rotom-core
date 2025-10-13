@@ -1,1 +1,75 @@
+/* Reset básico e variáveis de cor (Tema Poké Ball) */
+:root {
+    --primary-color: #e53935; /* Vermelho Poké Ball */
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --nav-indicator-color: #3B82F6; /* Um azul legal para o indicador */
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    padding-bottom: 80px; /* Espaço para o menu não cobrir o conteúdo */
+}
+
+/* --- Barra de Navegação --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 20px; /* Flutuando um pouco acima da borda */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a barra horizontalmente */
+    width: 90%;
+    max-width: 400px; /* Largura máxima para telas maiores */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.nav-list {
+    position: relative; /* Essencial para posicionar o indicador */
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    flex: 1; /* Faz cada item ocupar o mesmo espaço */
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #a0aec0; /* Cinza para ícones inativos */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-item.active .nav-link {
+    color: var(--nav-indicator-color); /* Cor do ícone ativo */
+}
+
+.nav-link i {
+    font-size: 28px; /* Tamanho dos ícones */
+}
+
+/* --- O Indicador Deslizante --- */
+.nav-indicator {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    background-color: var(--nav-indicator-color);
+    border-radius: 50%; /* Faz o indicador ser um círculo */
+    z-index: -1; /* Fica atrás dos ícones */
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Mágica da animação */
+}
