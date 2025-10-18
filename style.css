@@ -73,3 +73,49 @@ body {
     z-index: -1; /* Fica atrás dos ícones */
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Mágica da animação */
 }
+
+/* --- Estilos do Header --- */
+.main-header {
+    background-color: var(--primary-color); /* Nosso vermelho da Poké Ball */
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Garante que o header fique acima do conteúdo */
+    position: relative; 
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre a logo e o texto */
+}
+
+.logo-img {
+    width: 30px;
+    height: 30px;
+    /* Faz a imagem pixelada do Rotom ficar nítida */
+    image-rendering: pixelated; 
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --- Estilos do Footer --- */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e2e2e2; /* Um cinza claro, diferente do fundo */
+    color: #555;
+    font-size: 12px;
+}
+
+/* --- Ajuste no Conteúdo Principal --- */
+#app-content {
+    /* Garante que o conteúdo da página comece abaixo do header */
+    padding: 20px;
+    /* Define uma altura mínima para que o footer seja empurrado para baixo */
+    min-height: calc(100vh - 250px); /* Ajuste esse valor se necessário */
+}
